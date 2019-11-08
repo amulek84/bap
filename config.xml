@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.absolutist.absgamecollection" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Games Collection</name>
+<widget id="com.PayloadGamesLtd.BestAutoParts" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Best Auto Parts</name>
     <description>
-        Absolutist Games Collection.
+        Б/У автозапчасти из Европы для иностранных автомобилей.
     </description>
-    <author email="support@absolutist.com" href="http://absolutist.com">
-        Absolutist Team
+    <author email="amulek84@gmail.com" href="https://bap.in.ua">
+        Payload Games Ltd Team
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
@@ -18,7 +18,6 @@
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.6" />
     <plugin name="cordova-plugin-dialogs" source="npm" spec="~2.0.2" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.3.4" />
-    <gap:plugin name="onesignal-cordova-plugin" source="npm" spec="~2.7.0" />
     <icon src="icon.png" />
     <platform name="android">
         <preference name="android-targetSdkVersion" value="28" />
