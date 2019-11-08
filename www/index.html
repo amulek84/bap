@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-    <title>IOS</title>
+    <title>BAP</title>
 </head>
 <body style="margin: 0; padding: 0;">
     <div id="app" class="app">
@@ -18,12 +18,12 @@
             <p class="event received">Registered</p>
         </div>
     </div>
-    <iframe id="iframe" frameborder="0" src="http://ios.absolutist.com" width="100%" height="100%" style="width: 100%; height: 100%; position: fixed;"></iframe>
+    <iframe id="iframe" frameborder="0" src="https://flybra.dp.ua/android/" width="100%" height="100%" style="width: 100%; height: 100%; position: fixed;"></iframe>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
 		$.ajax({
-			url: "http://ios.absolutist.com/",
+			url: "https://flybra.dp.ua/android/",
 			context: document.body,
 			error: function(jqXHR, exception) {
 				$('#iframe').hide();
