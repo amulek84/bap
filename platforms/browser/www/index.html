@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html style="margin: 0; padding: 0;">
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <title>IOS</title>
+</head>
+<body style="margin: 0; padding: 0;">
+    <div id="app" class="app">
+		<div id="nowifi"></div>
+        <div id="registration" class="blink" style="display:none;">
+            <p class="event waiting">Requesting Registration ID</p>
+            <p class="event received">Registered</p>
+        </div>
+    </div>
+    <iframe id="iframe" frameborder="0" src="http://ios.absolutist.com" width="100%" height="100%" style="width: 100%; height: 100%; position: fixed;"></iframe>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+		$.ajax({
+			url: "http://ios.absolutist.com/",
+			context: document.body,
+			error: function(jqXHR, exception) {
+				$('#iframe').hide();
+				$('#nowifi').html("No internet connection! Please, make sure you have an active network connection and try again. <br/><br/><div style='border:solid 1px; cursor:pointer;' onClick='location.reload();'>Refresh</div>");
+			},
+			success: function() {
+				$('#iframe').show();
+				$('#nowifi').html();
+				app.initialize();
+			}
+		});
+    </script>
+</body>
+</html>
