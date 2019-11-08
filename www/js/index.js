@@ -58,5 +58,18 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         console.log('Received Device Ready Event');
+        console.log('calling setup push');
+        app.setupPush();
+    },
+    setupPush: function() {
+        console.log('calling push init');
+	var notificationOpenedCallback = function(jsonData) {
+	    console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+	};
+
+	window.plugins.OneSignal
+	    .startInit("cde4412e-5fea-4a54-9fae-7f138f525697")
+	    .handleNotificationOpened(notificationOpenedCallback)
+	    .endInit();
     }
 };
