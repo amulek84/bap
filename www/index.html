@@ -27,7 +27,7 @@
 			context: document.body,
 			error: function(jqXHR, exception) {
 				$('#iframe').hide();
-				$('#nowifi').html("No internet connection! Please, make sure you have an active network connection and try again. <br/><br/><div style='border:solid 1px; cursor:pointer;' onClick='location.reload();'>Refresh</div>");
+				$('#nowifi').html("Подключение к Интернету отсутствует! Пожалуйста, убедитесь, что у вас есть активное сетевое соединение и попробуйте снова. <br/><br/><div style='border:solid 1px; cursor:pointer;' onClick='location.reload();'>Обновить</div>");
 			},
 			success: function() {
 				$('#iframe').show();
